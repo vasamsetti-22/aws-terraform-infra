@@ -4,7 +4,7 @@ pipeline {
   stage("terraform-fmt"){
     steps {
            sleep 10
-           terraform fmt
+           sh 'terraform fmt'
   }
   }
   }
