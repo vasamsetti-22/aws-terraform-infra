@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'terraform'}
+  agent { dockerfile true }
   stages {
   stage("terraform-fmt"){
     steps {
