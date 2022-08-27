@@ -1,2 +1,2 @@
 FROM hashicorp/terraform:latest
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/sh"]
