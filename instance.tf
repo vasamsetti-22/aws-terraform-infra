@@ -1,9 +1,9 @@
 resource "aws_instance" "apache-instance" {
-  ami           = "ami-079b5e5b3971bd10d" 
-  instance_type = "t2.micro"
-  subnet_id = aws_subnet.pvt.id
+  ami                         = "ami-079b5e5b3971bd10d"
+  instance_type               = "t2.micro"
+  subnet_id                   = aws_subnet.pvt.id
   associate_public_ip_address = false
-  vpc_security_group_ids = [aws_security_group.instance-sec.id]
+  vpc_security_group_ids      = [aws_security_group.instance-sec.id]
   tags = {
     "name" = "apache-instance"
   }
