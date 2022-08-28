@@ -1,0 +1,10 @@
+name: validate
+on: [push]
+jobs:
+  terraform-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Terraform
+      - uses: hashicorp/setup-terraform@v1
+      - run: terraform fmt -check
